@@ -1,0 +1,42 @@
+#conhecimentos {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+
+        .lista {
+            justify-content: center;
+            .item {
+                width: 200px;
+                height: 200px;
+                padding: 30px 20px;
+                margin: 0 auto;
+                background: $branco;
+                border: 0.5px solid $azul3;
+                border-radius: 6px;
+                margin-bottom: 28px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                div {
+                    width: 160px;
+                    height: 140px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    img {
+                        max-width: 90px;
+                        align-self: center;
+                    }
+
+                    h4 {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
