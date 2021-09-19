@@ -54,11 +54,24 @@
 
             #email {
                 cursor: pointer;
-                transition: 0.3s ease-in-out;
 
-                &:hover {
-                    background: #c4cefc36;
-                    transition: 0.3s ease-in-out;
+                &.ativo {
+                    position: relative;
+
+                    .overlay::after {
+                        content: 'Copiado!';
+                        font-size: 1.2em;
+                        box-sizing: border-box;
+                        padding-top: 90px;
+                        color: $branco;
+                        font-weight: 500;
+                        background: $azul5;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
         }
