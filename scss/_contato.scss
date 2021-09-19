@@ -1,0 +1,66 @@
+#contato {
+    .container {
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 16px 0 24px 0;
+        }
+
+        .contato {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                height: 200px;
+                width: 280px;
+                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                border-radius: 4px;
+                border: 0.5px solid $azul3;
+                margin-bottom: 28px;
+                color: $preto;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: $preto;
+                }
+
+                img {
+                    max-width: 50px;
+                    margin-bottom: 12px;
+                    align-self: center;
+                }
+
+                h3 {
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            #email {
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    background: #c4cefc36;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
