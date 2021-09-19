@@ -3,7 +3,7 @@ main {
 
     .container {
         flex-direction: column;
-        
+
         .job {
             max-width: 280px;
             display: flex;
@@ -24,9 +24,11 @@ main {
 
             a {
                 padding: 10px;
+                color: $preto;
 
                 i {
                     margin-right: 12px;
+                    color: $azul2;
                 }
             }
         }
@@ -39,12 +41,11 @@ main {
             background: $azul3;
             padding: 12px 24px;
             border-radius: 6px;
-            transition: .2s ease-in-out;
-            
+            transition: 0.2s ease-in-out;
+
             &:hover {
                 background: $azul2;
-            transition: .2s ease-in-out;
-
+                transition: 0.2s ease-in-out;
             }
         }
     }

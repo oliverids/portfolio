@@ -1,0 +1,14 @@
+#sobre {
+    .container {
+        flex-direction: column;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+
+            div p{
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
