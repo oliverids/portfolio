@@ -1,0 +1,80 @@
+#projetos {
+    .container {
+        flex-direction: column;
+
+        .lista {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                margin-bottom: 32px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                img {
+                    border: 1px solid $azul3;
+                    border-radius: 4px;
+                    align-self: center;
+                    margin-bottom: 28px;
+                }
+
+                .info-p {
+                    h4 {
+                        margin: 12px 0 16px 0;
+                    }
+
+                    .tags {
+                        margin: 16px 0 24px 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        p {
+                            margin-right: 16px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            color: #32464b;
+                            background: $azul4;
+                            padding: 4px;
+                            border-radius: 4px;
+
+                            a {
+                                color: $azul3;
+                            }
+
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+
+                    a[href^="https://oliverids"]
+                    {
+                        display: block;
+                        width: 130px;
+                        color: $branco;
+                        background: $azul3;
+                        padding: 6px 12px;
+                        border-radius: 4px;
+                        transition: 0.3s ease-in-out;
+
+                        i {
+                            margin-right: 8px;
+                        }
+
+                        &:hover {
+                            background: $azul2;
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
