@@ -7,6 +7,14 @@
             flex-direction: column;
 
             @media only screen and (min-width: 768px) {
+                & {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
                 p {
                     max-width: 480px;
                 }

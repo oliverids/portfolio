@@ -21,8 +21,18 @@
                     flex-direction: row;
                     justify-content: space-between;
                     flex-wrap: wrap;
+                    align-content: center;
                 }
-             }
+            }
+
+            @media only screen and (min-width: 1200px) {
+                & {
+                    flex-direction: row;
+                    justify-content: spaceb;
+                    flex-wrap: wrap;
+                    align-content: center;
+                }
+            }
 
             li {
                 height: 200px;
@@ -39,9 +49,16 @@
 
                 @media only screen and (min-width: 768px) {
                     &:nth-child(3) {
-                        margin-bottom: 0px;
+                        margin-bottom: 0;
                     }
-                 }
+                }
+
+                @media only screen and (min-width: 1200px) {
+                    & {
+                        margin-bottom: 0;
+                        width: 240px;
+                    }
+                }
 
                 &:last-child {
                     margin-bottom: 0;
@@ -69,11 +86,20 @@
             #email {
                 cursor: pointer;
 
+                @media only screen and (min-width: 1200px) {
+                    p {
+                        width: 220px;
+                        text-align: center;
+                        margin: 0 auto;
+                        word-wrap:break-word
+                    }
+                }
+
                 &.ativo {
                     position: relative;
 
                     .overlay::after {
-                        content: 'Copiado!';
+                        content: "Copiado!";
                         font-size: 1.2em;
                         box-sizing: border-box;
                         padding-top: 90px;

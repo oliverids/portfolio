@@ -10,6 +10,12 @@ main {
             justify-content: space-between;
             color: $azul2;
             margin: 16px 0;
+
+            @media only screen and (min-width: 768px) {
+                & {
+                    max-width: 330px;
+                }
+            }
         }
 
         @media only screen and (min-width: 768px) {
