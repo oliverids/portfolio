@@ -1,0 +1,51 @@
+main {
+    padding: 155px 0 80px 0;
+
+    .container {
+        flex-direction: column;
+        
+        .job {
+            max-width: 280px;
+            display: flex;
+            justify-content: space-between;
+            color: $azul2;
+            margin: 16px 0;
+
+            & p:nth-child(2) {
+                color: $azul3;
+            }
+        }
+
+        .redes {
+            max-width: 230px;
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0;
+
+            a {
+                padding: 10px;
+
+                i {
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        a[href="#projetos"] {
+            width: 250px;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: $branco;
+            background: $azul3;
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: .2s ease-in-out;
+            
+            &:hover {
+                background: $azul2;
+            transition: .2s ease-in-out;
+
+            }
+        }
+    }
+}
