@@ -1,0 +1,39 @@
+footer {
+    background: $azul2;
+    color: $branco;
+    padding: 20px 0;
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-size: 0.8em;
+        }
+    }
+}
+
+body {
+    position: relative;
+
+    #topo {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;    
+        background: #2e3d859a;
+        box-shadow: 0px 4px 10px rgba(9, 13, 24, 0.1);
+
+        padding: 10px;
+        border-radius: 4px;  
+
+        span {
+            position: absolute;
+            left: -9999px;
+        }
+
+        i {
+            font-size: 1.4em;
+            color: $branco;
+        }
+    }
+}
