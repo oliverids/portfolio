@@ -12,6 +12,12 @@ main {
             margin: 16px 0;
         }
 
+        @media only screen and (min-width: 768px) {
+           p {
+               max-width: 400px;
+           }
+        }
+
         .redes {
             max-width: 230px;
             display: flex;

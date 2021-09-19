@@ -80,6 +80,12 @@ header {
                 transform: translateX(150px);
                 transition: all .3s ease-in-out;
 
+                @media only screen and (min-width: 768px) {
+                    & {
+                        width: 240px;
+                    }
+                 }
+
                 #slide {
                     height: 140px;
                     display: flex;
