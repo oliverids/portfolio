@@ -14,18 +14,18 @@
                 align-content: center;
                 margin-bottom: 32px;
 
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
                 @media only screen and (min-width: 768px) {
                     & {
                         flex-direction: row;
-                        justify-content: space-between;
                         align-items: center;
+                        justify-content: start;
                         margin-bottom: 40px;
                         max-width: 700px;
                     }
-                }
-
-                &:last-child {
-                    margin-bottom: 0px;
                 }
 
                 img {
@@ -36,8 +36,15 @@
 
                     @media only screen and (min-width: 768px) {
                         & {
-                            max-width: 320px;
+                            max-width: 300px;
                             margin-bottom: 0;
+                            margin-right: 24px;
+                        }
+                    }
+
+                    @media only screen and (min-width: 1200px) {
+                        & {
+                            max-width: 320px;
                         }
                     }
                 }

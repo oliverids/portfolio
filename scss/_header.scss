@@ -19,6 +19,14 @@ header {
             #menu-b {
                 padding: 10px;
 
+                @media only screen and (min-width: 1040px) {
+                    display: none;
+
+                    div {
+                        display: none;
+                    }
+                }
+
                 div {
                     width: 32px;
                     height: 5px;
@@ -78,26 +86,64 @@ header {
                 visibility: hidden;
                 opacity: 0;
                 transform: translateX(150px);
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
 
-                @media only screen and (min-width: 768px) {
+                @media only screen and (min-width: 500px) {
                     & {
-                        width: 240px;
+                        width: 280px;
                     }
-                 }
+                }
+
+                @media only screen and (min-width: 1040px) {
+                    & {
+                        transform: translateX(0);
+                        visibility: visible;
+                        opacity: 1;
+                        position: initial;
+                        height: auto;
+                        background: none;
+                        padding: 0;
+                        width: auto;
+                        box-shadow: none;
+                    }
+                }
 
                 #slide {
-                    height: 140px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
+                    align-items: center;
+
+                    @media only screen and (min-width: 1040px) {
+                        & {
+                            width: 550px;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            position: initial;
+                        }
+                    }
 
                     li {
+                        margin-bottom: 20px;
+                        width: 100%;
+                        text-align: left;
+
+                        @media only screen and (min-width: 1040px) {
+                            & {
+                                margin-bottom: 0;
+                                text-align: center;
+                            }
+                        }
+
                         a {
+                            display: block;
                             padding: 10px;
                             font-weight: 500;
                             color: $preto;
                             font-size: 1.1em;
+
+                            &.active {
+                                color: $azul3;
+                            }
                         }
                     }
                 }
@@ -106,7 +152,7 @@ header {
                     visibility: visible;
                     opacity: 1;
                     transform: translateX(0px);
-                    transition: all .3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                 }
             }
         }

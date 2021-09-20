@@ -7,8 +7,9 @@ menuBtn.addEventListener('click', () => {
     })
 })
 
+const links = document.querySelectorAll('#slide a[href^="#"]');
 function initScrollSuave() {
-    const linksInternos = Array.from(document.querySelectorAll('#slide a[href^="#"]'));
+    const linksInternos = Array.from(links);
     linksInternos.push(document.getElementById('cta-projeto'));
 
     function scrollToSection(event) {
@@ -27,6 +28,28 @@ function initScrollSuave() {
     })
 }
 initScrollSuave();
+
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const windowmetade = window.innerHeight * 0.6
+    let current;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top - windowmetade;
+
+        if (sectionTop < 0) {
+            current = section.getAttribute('id');
+        }
+    })
+
+    links.forEach(link => {
+        link.classList.remove('active')
+
+        if (link.classList.contains(current)) {
+            link.classList.add('active')
+        }
+    })
+})
 
 const voltaTopo = document.getElementById("topo");
 voltaTopo.addEventListener('click', () => {
