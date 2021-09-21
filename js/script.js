@@ -16,11 +16,9 @@ function initScrollSuave() {
         event.preventDefault();
         const href = event.currentTarget.getAttribute('href');
         const section = document.querySelector(href);
+        let topo = section.offsetTop - 110;
 
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
+        window.scrollTo({top: topo, behavior: 'smooth'})
     }
 
     linksInternos.forEach((link) => {
@@ -31,7 +29,7 @@ initScrollSuave();
 
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
-    const windowmetade = window.innerHeight * 0.6
+    const windowmetade = window.innerHeight * 0.4;
     let current;
 
     sections.forEach(section => {
@@ -70,5 +68,4 @@ emailDiv.addEventListener('click', () => {
     setTimeout(() => {
         emailDiv.classList.remove('ativo');
     }, 1100);
-
 })
