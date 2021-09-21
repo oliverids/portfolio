@@ -50,15 +50,17 @@ body {
 }
 
 .container {
-    max-width: 320px;
-    margin: 0 auto;
     display: flex;
+    padding: 0 2rem;
+    transition: .3s ease-in-out;
 
     @media only screen and (min-width: 768px) {
-        max-width: 648px;
+        padding: 0 4rem;
     }
 
     @media only screen and (min-width: 1200px) {
+        padding: 0;
+        margin: 0 auto;
         max-width: 1040px;
     }
 }
@@ -116,10 +118,10 @@ h3 {
 
 h4 {
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 1.1em;
 
     @media only screen and (min-width: 1200px) {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 

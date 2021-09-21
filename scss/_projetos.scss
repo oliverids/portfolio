@@ -2,16 +2,18 @@
     .container {
         flex-direction: column;
 
-        .lista {
+        .lista-p {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin: 0 auto;
 
             li {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-content: center;
+                max-width: 360px;
                 margin-bottom: 32px;
 
                 &:last-child {
@@ -21,10 +23,14 @@
                 @media only screen and (min-width: 768px) {
                     & {
                         flex-direction: row;
-                        align-items: center;
-                        justify-content: start;
-                        margin-bottom: 40px;
-                        max-width: 700px;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        max-width: 680px;
+                    }
+
+                    img {
+
+                        max-width: 320px;
                     }
                 }
 
@@ -32,13 +38,14 @@
                     border: 1px solid $azul3;
                     border-radius: 4px;
                     align-self: center;
-                    margin-bottom: 28px;
+                    margin-bottom: 20px;
+
 
                     @media only screen and (min-width: 768px) {
                         & {
-                            max-width: 300px;
                             margin-bottom: 0;
                             margin-right: 24px;
+                            align-self: flex-start;
                         }
                     }
 
@@ -57,21 +64,23 @@
                     }
 
                     h4 {
-                        margin: 12px 0 16px 0;
+                        margin: 12px 0;
+                        font-size: 1em;
                     }
 
                     .tags {
-                        margin: 16px 0 24px 0;
+                        margin: 12px 0 24px 0;
                         display: flex;
                         flex-wrap: wrap;
 
                         p {
                             margin-right: 16px;
+                            font-size: 0.9em;
                             font-weight: 500;
                             text-transform: uppercase;
                             color: #32464b;
                             background: $azul4;
-                            padding: 4px;
+                            padding: 2px 4px;
                             border-radius: 4px;
 
                             a {

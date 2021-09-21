@@ -4,20 +4,41 @@
         justify-content: center;
 
         .lista {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
             justify-content: center;
+            transition: .3s ease-in-out;
 
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 500px) {
                 & {
-                    display: flex;
+                    max-width: 500px;
+                    flex-direction: row;
                     flex-wrap: wrap;
-                    justify-content: center;
+                    justify-content: space-between;
                 }
             }
 
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 900px) {
                 & {
-                    justify-content: space-between;
+                    max-width: 760px;
+                }
 
+                &::after {
+                    content: "";
+                    flex: auto;
+                    max-width: 200px;
+                }
+            }
+
+            @media only screen and (min-width: 1200px) {
+                & {
+                    max-width: 999px;
+                    margin: 0;
+                }
+
+                &::after {
+                    content: none;
                 }
             }
 
@@ -25,20 +46,16 @@
                 width: 200px;
                 height: 200px;
                 padding: 30px 20px;
-                margin: 0 auto;
+                // margin: 0 auto 28px auto;
                 background: $branco;
                 border: 0.5px solid $azul3;
                 border-radius: 6px;
                 margin-bottom: 28px;
 
-                @media only screen and (min-width: 768px) {
-                    & {
-                        margin: 0 24px 28px 0;
+                &:nth-child(5) {
+                    img {
+                        margin-top: 24px;
                     }
-                }
-
-                &:last-child {
-                    margin-bottom: 0px;
                 }
 
                 div {

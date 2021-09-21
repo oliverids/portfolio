@@ -88,9 +88,9 @@ header {
                 transform: translateX(150px);
                 transition: all 0.3s ease-in-out;
 
-                @media only screen and (min-width: 500px) {
+                @media only screen and (min-width: 768px) {
                     & {
-                        width: 280px;
+                        width: 200px;
                     }
                 }
 
@@ -105,6 +105,7 @@ header {
                         padding: 0;
                         width: auto;
                         box-shadow: none;
+                        transition: none;
                     }
                 }
 
@@ -131,6 +132,7 @@ header {
                             & {
                                 margin-bottom: 0;
                                 text-align: center;
+                                width: auto;
                             }
                         }
 
@@ -152,6 +154,10 @@ header {
                     opacity: 1;
                     transform: translateX(0px);
                     transition: all 0.3s ease-in-out;
+
+                    @media only screen and (min-width: 1040px) {
+                        transition: none;
+                    }
                 }
             }
         }
