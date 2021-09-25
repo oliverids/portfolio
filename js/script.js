@@ -90,12 +90,13 @@ voltaTopo.addEventListener('click', () => {
 })
 
 const emailDiv = document.getElementById('email'),
+    overlay = document.querySelector('.overlay'),
     email = 'oliveira.idsoliver23@gmail.com';
 
 emailDiv.addEventListener('click', () => {
     navigator.clipboard.writeText(email);
-    emailDiv.classList.add('ativo');
+    overlay.classList.add('ativo');
     setTimeout(() => {
-        emailDiv.classList.remove('ativo');
+        overlay.classList.remove('ativo');
     }, 1100);
 })
