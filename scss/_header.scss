@@ -4,6 +4,8 @@ header {
     background: #fff;
     position: fixed;
     width: 100%;
+    z-index: 99999;
+    top: -3px;
 
     .container {
         justify-content: space-between;

@@ -7,6 +7,36 @@ menuBtn.addEventListener('click', () => {
     })
 })
 
+const projetos = document.querySelectorAll('#projeto'),
+    projetoInfo = document.querySelectorAll('#infop');
+
+function ativaProjeto(index) {
+    projetoInfo.forEach(section => section.classList.remove("ativo"));
+    projetoInfo[index].classList.add("ativo");
+}
+
+projetos.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        if (projetoInfo[index].classList.contains("ativo")) {
+            projetoInfo[index].classList.remove("ativo");
+
+        } else {
+            ativaProjeto(index);
+        }
+    })
+})
+
+window.addEventListener('click', event => {
+    let temAtivo = document.querySelector('#infop.ativo');
+
+    if (temAtivo) {
+        if (!(temAtivo.contains(event.target) || temAtivo.previousElementSibling.contains(event.target))) {
+            [temAtivo, temAtivo.previousElementSibling].forEach(e => e.classList.remove("ativo"))
+
+        }
+    }
+})
+
 const links = document.querySelectorAll('#slide a[href^="#"]');
 function initScrollSuave() {
     const linksInternos = Array.from(links);
@@ -18,7 +48,7 @@ function initScrollSuave() {
         const section = document.querySelector(href);
         let topo = section.offsetTop - 110;
 
-        window.scrollTo({top: topo, behavior: 'smooth'})
+        window.scrollTo({ top: topo, behavior: 'smooth' })
     }
 
     linksInternos.forEach((link) => {

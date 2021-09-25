@@ -55,6 +55,11 @@
 
                 a {
                     color: $preto;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
 
                 img {
@@ -69,7 +74,7 @@
                     align-items: center;
                     justify-content: center;
 
-                    i{
+                    i {
                         box-sizing: border-box;
                         margin-left: 8px;
                         color: $azul2;
