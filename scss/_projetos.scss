@@ -6,7 +6,8 @@
         .lista-p {
             display: flex;
             flex-direction: column;
-            transition: .3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            margin: 0 auto;
 
             @media only screen and (min-width: 768px) {
                 & {
@@ -29,7 +30,7 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                transition: .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
 
                 @media only screen and (min-width: 768px) {
                     & {
@@ -42,7 +43,7 @@
                     border: 2px inset $azul3;
                     border-radius: 4px;
                     margin: 0 auto 32px auto;
-                    transition: 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
 
                     @media only screen and (min-width: 768px) {
                         & {
@@ -51,13 +52,16 @@
                         }
                     }
 
+                    @media only screen and (min-width: 1100px) {
+                        & {
+                            width: 320px;
+                        }
+                    }
+
                     &:hover,
                     &:focus,
                     &:focus-within,
                     &.ativo {
-                        text-decoration: underline;
-                        text-decoration-thickness: 0.03rem;
-                        text-underline-offset: 1.5px;
                         border-color: $azul4;
                         box-shadow: 0 0 4px #32323217;
                         transition: 0.3s ease-in-out;
@@ -88,13 +92,13 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        padding: 0 10px;
                     }
                 }
 
                 #infop {
                     background: $azul3;
                     color: $branco;
+                    box-shadow: 0 0 10px #32323225;
                     border-radius: 4px;
                     position: relative;
                     max-width: 294px;
@@ -103,10 +107,10 @@
                     width: 0;
                     height: 0;
                     padding: 0;
-                    transform: translateY(-100px);
+                    transform: translateY(-50px);
                     opacity: 0;
-                    transition: opacity .3s ease-in-out;
-                    transition: transform .3s ease-in-out;
+                    transition: opacity 0.5s ease-in-out;
+                    transition: transform 0.3s ease-in-out;
 
                     &::before {
                         content: "";
@@ -162,10 +166,8 @@
                                 font-weight: 500;
                                 margin-right: 12px;
                                 text-transform: initial;
-    
                             }
                         }
-
                     }
 
                     &.ativo {
@@ -176,8 +178,8 @@
                         margin: -12px 0 32px 0;
                         transform: translateY(0);
                         opacity: 1;
-                        transition: opacity .3s ease-in-out;
-                        transition: transform .3s ease-in-out;
+                        transition: opacity 0.3s ease-in-out;
+                        transition: transform 0.3s ease-in-out;
                     }
 
                     &.ativo::before {
